@@ -1,0 +1,13 @@
+//JS object passess by reference
+function changeFirstName(per){
+per.firstName="rock";
+}
+var person={firstName:"bill"};
+changeFirstName(person)
+person.firstName;                 //returns rock
+
+//object reference
+var person={firstName:"rock"},
+var anotherPerson=person;
+anotherPerson.firstName="bill";
+person.firstName;               //returns bill
