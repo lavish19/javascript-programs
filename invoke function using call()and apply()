@@ -1,0 +1,19 @@
+//The main difference between call() and apply() is call() takes arguments separately and apply() takes arguments as an array.//
+ 
+ const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+const person2 = {
+firstName:"leah",
+lastName:"gotti",
+}
+
+person.fullName.call(person1, "Oslo", "Norway");
+person.fullName.apply(person2,["Austin","Texas"]);
